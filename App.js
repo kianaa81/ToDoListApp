@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, TextInput} from 'react-native';
 import Task from './Task';
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
             <Task text = {'Task 1'} />
           </View>
           </ScrollView>
+          <TextInput style={styles.input} onChangeText={onChangeNumber} value={number} placeholder="useless placeholder" keyboardType="numeric"/>
       </View>
     );
   };
