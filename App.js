@@ -1,5 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import Task from './Task';
+
 const App = () => {
 
    return (
@@ -10,7 +12,7 @@ const App = () => {
           </View>
       
           <View style = {styles.items}>
-            <Text></Text>
+            <Task />
           </View>
           </ScrollView>
       </View>
