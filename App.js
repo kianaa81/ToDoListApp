@@ -14,10 +14,10 @@ const App = () => {
             <Task text = {'Task 1'} />
           </View>
           </ScrollView>
-          <TextInput style={styles.input} onChangeText={onChangeNumber} value={number} placeholder="useless placeholder" keyboardType="numeric"/>
+          <TextInput style={styles.input} placeholder="Type here"/>
           <TouchableOpacity>
             <View style={styles.addWrapper}>
-              <Tex style={styles.addText}>+</Tex>
+              <Text style={styles.addText}>+</Text>
             </View>
           </TouchableOpacity>
       </View>
@@ -44,7 +44,22 @@ const styles = StyleSheet.create({
   },
   items: {
     marginTop: 30,
-  }
+  },
+  input: {
+    padding: 15,
+    backgroundColor: '#fff',
+    borderRadius: 60,
+    borderColor: '#C0C0C0',
+    borderWidth: 1,
+    width: 250,
+    paddingHorizontal: 15,
+  },
+  addWrapper: {
+
+  },
+  addText: {
+
+  },
 });
 
 export default App;
