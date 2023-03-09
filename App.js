@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity, Keyboard} from 'react-native';
 import Task from './Task';
 
 const App = () =>{
@@ -7,6 +7,7 @@ const App = () =>{
   const [taskItems, setTaskItems] = useState ([]);
 
   const handleAddTask = () => {
+    Keyboard.dismiss();
     setTaskItems ([...taskItems, task])
     setTask(null);
   }
