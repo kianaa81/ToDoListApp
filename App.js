@@ -32,9 +32,13 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 30,
-    fontFamily: 'Impact, Haettenschweiler, Arial Narrow Bold, sans-serif'
+    fontFamily: 'Impact, Haettenschweiler, Arial Narrow Bold, sans-serif',
+    marginLeft: 60,
+    color: '#d87093'
   },
-  items: {}
+  items: {
+    marginTop: 30,
+  }
 });
 
 export default App;
