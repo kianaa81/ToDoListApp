@@ -17,7 +17,11 @@ const App = () =>{
             <Text style = {styles.sectionTitle}>Add to your list</Text>
           </View>
           <View style = {styles.items}>
-            <Task text = {'Task 1'} />
+            {
+              taskItems.map((item, index) => {
+               return <Task key={index} text={item}/>
+              })
+            }
           </View>
           </ScrollView>
           
