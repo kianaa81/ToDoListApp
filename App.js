@@ -22,8 +22,9 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: 'rgb(197, 208, 219)',
     paddingHorizontal: 10,
+
   },
   taskWrapper: {
     paddingTop: 80,
