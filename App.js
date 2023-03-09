@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, Text, StyleSheet, ScrollView, TextInput, TouchableOpacity} from 'react-native';
 import Task from './Task';
 
-const App = () => {
+const App = () =>{
+  const [task, setTask] = useState();
+  
 
+  const handleAddTask = () => {
+
+  }
    return (
       <View style={styles.container}>
         <ScrollView >
@@ -15,11 +20,11 @@ const App = () => {
           </View>
           </ScrollView>
           
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => handleAddTask() }>
             <View style={styles.addWrapper}>
               <Text style={styles.addText}>+</Text>
             </View>
-          </TouchableOpacity><TextInput style={styles.input} placeholder="Type here"/>
+          </TouchableOpacity><TextInput style={styles.input} placeholder="Type here" value={task} onChangeText={ text => setTask(text)}/>
       </View>
     );
   };
