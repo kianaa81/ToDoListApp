@@ -4,10 +4,11 @@ import Task from './Task';
 
 const App = () =>{
   const [task, setTask] = useState();
-  
+  const [taskItems, setTaskItems] = useState ([]);
 
   const handleAddTask = () => {
-
+    setTaskItems ([...taskItems, task])
+    setTask(null);
   }
    return (
       <View style={styles.container}>
