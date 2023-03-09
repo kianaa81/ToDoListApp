@@ -1,17 +1,14 @@
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, ScrollView, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 const App = () => {
-  const [count, setCount] = useState(0);
-  const onPress = () => setCount(prevCount => prevCount + 1);
 
-
-    return (
+   return (
       <View style={styles.container}>
         <ScrollView >
-        <Text>Count: {count}</Text>
-        <TouchableOpacity style={styles.button} onPress={onPress}>
-        <Text>Press Here</Text>
-      </TouchableOpacity>
+          <View style = {styles.taskWrapper}>
+            <Text>Add to your list</Text>
+          </View>
+      
           </ScrollView>
       </View>
     );
@@ -19,10 +16,16 @@ const App = () => {
 
 
 const styles = StyleSheet.create({
-    container : {
-        backGroundColor: '#ddd',
-        flex: 1,
-    },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 10,
+  },
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#DDDDDD',
+    padding: 10,
+  }
 });
 
 export default App;
