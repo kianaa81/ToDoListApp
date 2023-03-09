@@ -37,10 +37,14 @@ const Task = (props) => {
         marginRight: 15
     },
     itemText: {
-
+      maxWidth: '%80',
     },
     circular: {
-
+      width: 12,
+      height: 12,
+      borderColor: 'rgb(125, 72, 173)',
+      borderWidth: 2,
+      borderRadius: 5,
     }
   });
 
