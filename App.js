@@ -10,9 +10,8 @@ const App = () => {
           <View style = {styles.taskWrapper}>
             <Text style = {styles.sectionTitle}>Add to your list</Text>
           </View>
-      
           <View style = {styles.items}>
-            <Task />
+            <Task text = {'Task 1'} />
           </View>
           </ScrollView>
       </View>
