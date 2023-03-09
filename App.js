@@ -14,12 +14,12 @@ const App = () => {
             <Task text = {'Task 1'} />
           </View>
           </ScrollView>
-          <TextInput style={styles.input} placeholder="Type here"/>
+          
           <TouchableOpacity>
             <View style={styles.addWrapper}>
               <Text style={styles.addText}>+</Text>
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity><TextInput style={styles.input} placeholder="Type here"/>
       </View>
     );
   };
@@ -51,11 +51,19 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     borderColor: '#C0C0C0',
     borderWidth: 1,
-    width: 250,
-    paddingHorizontal: 15,
+    width: 300,
+    marginBottom: 60
   },
   addWrapper: {
-
+    width: 60,
+    height: 60,
+    backgroundColor: '#FFF',
+    borderRadius: 60,
+    justifyContent: 'space-evenly',
+    marginLeft: 300,
+    alignItems: 'center',
+    borderColor: '#C0C0C0',
+    borderWidth: 1
   },
   addText: {
 
