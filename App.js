@@ -27,7 +27,11 @@ const App = () =>{
           <View style = {styles.items}>
             {
               taskItems.map((item, index) => {
-               return <Task key={index} text={item}/>
+               return (
+                 <TouchableOpacity key={index}  onPress={() => completeTask(index)}>
+                  <Tasktext text={item}/>
+                 </TouchableOpacity>
+               ) 
               })
             }
           </View>
