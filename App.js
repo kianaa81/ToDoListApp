@@ -18,7 +18,7 @@ const App = () =>{
     setTaskItems(itemsCopy);
   }
 
-   return (
+  return (
       <View style={styles.container}>
         <ScrollView >
           <View style = {styles.taskWrapper}>
@@ -28,15 +28,14 @@ const App = () =>{
             {
               taskItems.map((item, index) => {
                return (
-                 <TouchableOpacity key={index}  onPress={() => completeTask(index)}>
-                  <Tasktext text={item}/>
+                 <TouchableOpacity key={index} onPress={() => completeTask(index)}>
+                  <Task text={item}/>
                  </TouchableOpacity>
-               ) 
+               )
               })
             }
           </View>
           </ScrollView>
-          
           <TouchableOpacity onPress={() => handleAddTask() }>
             <View style={styles.addWrapper}>
               <Text style={styles.addText}>+</Text>
@@ -46,13 +45,11 @@ const App = () =>{
     );
   };
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'rgb(197, 208, 219)',
-    paddingHorizontal: 10,
-
+    paddingHorizontal: 20,
   },
   taskWrapper: {
     paddingTop: 80,
@@ -62,10 +59,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontFamily: 'Impact, Haettenschweiler, Arial Narrow Bold, sans-serif',
     marginLeft: 60,
-    color: '#d87093'
+    color: '#d87093',
   },
   items: {
-    marginTop: 30,
+    marginTop: 40,
   },
   input: {
     padding: 15,
@@ -74,7 +71,7 @@ const styles = StyleSheet.create({
     borderColor: '#C0C0C0',
     borderWidth: 1,
     width: 300,
-    marginBottom: 60
+    marginBottom: 60,
   },
   addWrapper: {
     width: 60,
@@ -88,8 +85,9 @@ const styles = StyleSheet.create({
     borderWidth: 1
   },
   addText: {
+    color: '#d87093',
+  }
 
-  },
 });
 
 export default App;
